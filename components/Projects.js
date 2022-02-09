@@ -94,7 +94,6 @@ const Projects = () => {
             Projects
           </h1>
         </div>
-        {/* Grid starts here */}
         <div className="bg-[#F1F1F1] dark:bg-gray-900">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 py-20 pb-40">
             {userData.projects.map((proj, i) => (
@@ -113,10 +112,10 @@ const Projects = () => {
     );
   }
   
-  const ProjectCard = ({ title, link, imgUrl, number, repo }) => {
+  const ProjectCard = ({ title, link, imgUrl, repo }) => {
     return (
     <>
-    <div className="relative overflow-hidden">
+    <div className="project-card relative overflow-hidden">
         <div className="h-72 object-cover">
         <img
             src={imgUrl}
@@ -127,9 +126,6 @@ const Projects = () => {
         <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl rounded-md px-2" style={{backgroundColor: '#eab5d0'}}>
         {title}
         </h1>
-        {/* <h1 className="absolute bottom-10 left-10 text-pink-200 font-bold text-xl">
-        { number.length === 1 ? "0" + number : number }
-        </h1> */}
 
       <h1 className="absolute bottom-10 right-20 text-pink-200 font-bold text-xl">
             { link ? <a href={link} className="w-full block shadow-2xl"><img src="https://img.icons8.com/material-outlined/24/000000/link--v1.png" className="project-link"/></a> : null }
