@@ -7,12 +7,32 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  background: #f9edf5;
 }
+
 a {
-  color: inherit;
+  color: #eab5d0;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img.project-link {
+  background-color: #eab5d0;
+  padding: 0.2em;
+  border-radius: 10px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  border: 2px solid red; 
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
 }

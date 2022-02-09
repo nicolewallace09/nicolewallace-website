@@ -2,10 +2,12 @@ import React from "react";
 import ContainerBlock from "../components/ContainerBlock";
 import AboutMe from "../components/AboutMe";
 
-export default function about() {
+const about = () => {
   return (
     <ContainerBlock>
       <AboutMe />
     </ContainerBlock>
   );
 }
+
+export default about; 

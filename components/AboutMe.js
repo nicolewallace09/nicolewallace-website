@@ -1,56 +1,60 @@
-import React from "react";
+import React from 'react';
+import Image from 'next/image'; 
+import aboutImg from '../public/ProjectImages/aboutImg.png'; 
 
 const userData = {
     about: {
         title:
-          "Hi I'm Nicole! A Full Stack Software Engineer from the SF Bay Area",
-    },
-    socialLinks: {
-        linkedin: "https://www.linkedin.com/in/nicole-wallace09/",
-        github: "https://github.com/nicolewallace09",
+          "Hi, I'm Nicole! A Software Engineer from the SF Bay Area.",
     },
     email: 'nicole.elisaw@gmail.com',
-    resumeUrl: "https://www.dropbox.com/s/m8a0he8l09nwyq0/Nicole%20Wallace%20-%20Software%20Engineer%20Resume%20v2021.pdf?dl=0"
+    resumeUrl: 'https://www.dropbox.com/s/0owq2k8kqayn987/Nicole%20Wallace%20-%20Software%20Engineer%20Resume%20v2.pdf?dl=0'
 }
 
-export default function AboutMe() {
+ const AboutMe = () => {
   return (
-    <section className="bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-        <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
-          About Me.
+    <section className="dark:bg-gray-800">
+      <div className="max-w-6xl mx-auto h-48 dark:bg-gray-800">
+        <h1 className="about-title text-5xl md:text-9xl font-bold py-20 text-center md:text-left" style={{color: '#bb91a6'}}>
+          About Me
         </h1>
       </div>
 
-      <div className="bg-[#F1F1F1] -mt-10 dark:bg-gray-900">
+      {/* <div className="bg-[#F1F1F1] -mt-10 dark:bg-gray-900">
         <div className="text-container max-w-6xl mx-auto pt-20 justify-center">
           <p
             className="leading-loose text-xl md:text-4xl font-semibold  mx-1"
-            style={{ lineHeight: "3rem" }}
+            style={{ lineHeight: '3rem', color:'#eab5d0' }}
           >
             {userData.about.title}
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="bg-[#F1F1F1] dark:bg-gray-900 px-4">
         <div className="pt-20 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-20 gap-x-20">
-        
           <div className="inline-flex flex-col">
             <div>
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
+              <Image 
+                src={aboutImg} 
+                alt='graphic of woman using tech'
+                width='400em'
+                height='400em'
+              />
+              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200" style={{color: '#bb91a6'}}>
                 Contact
               </h1>
               <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
                 Feel free to send me an <a
                     href={`mailto:${userData.email}`}
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
+                    className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
+                    style={{color: '#eab5d0'}}
                 >email</a>
                 .
               </p>
             </div>
             <div className="mt-8">
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
+              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200" style={{color: '#bb91a6'}}>
                 Resume
               </h1>
               <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
@@ -59,46 +63,14 @@ export default function AboutMe() {
                   target="__blank"
                   className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
                   download
+                  style={{color: '#eab5d0'}}
                 >
                   resume
                 </a>
                 .
               </p>
             </div>
-
-            <h1 className="text-xl font-semibold text-gray-700 mt-8 dark:text-gray-200">
-              Links
-            </h1>
-            
-            <div className="mt-4">
-              <div className="flex flex-row justify-start items-center">
-                <a
-                  href={userData.socialLinks.github}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <p className="text-lg text-gray-500 relative overflow-hidden dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    GitHub
-                  </p>
-                </a>
-              </div>
-
-              <div className="flex flex-row justify-start items-center">
-                <a
-                  href={userData.socialLinks.linkedin}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <p className="text-lg text-gray-500 relative overflow-hidden dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    LinkedIn
-                  </p>
-                </a>
-              </div>
-
-            </div>
           </div>
-        
-
         
           <div className="col-span-1 md:col-span-2">
             <p className="text-xl text-gray-700 mb-4 dark:text-gray-300">
@@ -108,12 +80,11 @@ export default function AboutMe() {
                 Being from a small city across from the big city of San Francisco and from an unrepresented background in Tech, I wasn&apos;t aware of all the opportunities I could have had. For years, I wanted to be a Software Engineer, but had self-doubt and was scared of the obstacles I would face. I decided to switch careers during the start of the global pandemic and quit my full time job to finally fulfill my dreams.
                 <br></br>
                 <br></br>
-                I took this risk to challenge myself and to enter a career/industry that will always challenge me and allow me to learn. I wanted to be able to continuously grow within my career and to make an impact on real world problems. I am a naturally curious person which makes me want to always learn new things, a problem-solver who questions everything.I graduated from UC Berkeley&apos;s Full Stack Coding Bootcamp in August 2020 and I couldn&apos;t be happier now that I made the decision to make the jump. Now, I am looking for my first professional role as a Software Engineer and looking for a team to build with and learn from.
+                I took this risk to challenge myself and to enter a career/industry that will always challenge me and allow me to learn. I wanted to be able to continuously grow within my career and to make an impact on real world problems. I am a naturally curious person which makes me want to always learn new things, a problem-solver who questions everything. I graduated from UC Berkeley&apos;s Full Stack Coding Bootcamp in August 2020 and I couldn&apos;t be happier now that I made the decision to make the jump. Now, I am looking for my first professional role as a Software Engineer and looking for a team to build with and learn from.
             </p>
-        
-
-            <h1 className="bg-pink-500 text-3xl rounded-md px-2 py-1 inline-block font-bold text-gray-50 mt-4">
-              My Tech Stack
+      
+            <h1 className="text-3xl rounded-md px-2 py-1 inline-block font-bold text-gray-50 mt-4" style={{backgroundColor: '#bb91a6'}}>
+              Technologies
             </h1>
 
                 <div className="flex flex-row flex-wrap mt-1 justify-center">
@@ -145,3 +116,5 @@ export default function AboutMe() {
     </section>
   );
 }
+
+export default AboutMe; 

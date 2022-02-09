@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const userData = {
     projects: [
@@ -86,12 +86,12 @@ const userData = {
       ]
 }
 
-export default function Projects() {
+const Projects = () => {
     return (
-      <section className="bg-white dark:bg-gray-800">
-        <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-          <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
-            Projects.
+      <section className="dark:bg-gray-800">
+        <div className="max-w-6xl mx-auto h-48 dark:bg-gray-800">
+          <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left" style={{color: '#bb91a6'}}>
+            Projects
           </h1>
         </div>
         {/* Grid starts here */}
@@ -124,7 +124,7 @@ export default function Projects() {
             className="transform hover:scale-125 transition duration-2000 ease-out object-cover h-full w-full"
         />
         </div>
-        <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-pink-500 rounded-md px-2">
+        <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl rounded-md px-2" style={{backgroundColor: '#eab5d0'}}>
         {title}
         </h1>
         {/* <h1 className="absolute bottom-10 left-10 text-pink-200 font-bold text-xl">
@@ -141,5 +141,7 @@ export default function Projects() {
       </div>
     </>
 )};
+
+export default Projects; 
 
   
