@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Navbar from "./Navbar";
-import { Container } from "postcss";
+// import { Container } from "postcss";
 
 const ContainerBlock = ({ children, ...customMeta }) => {
   const router = useRouter();
@@ -10,7 +10,7 @@ const ContainerBlock = ({ children, ...customMeta }) => {
   const meta = {
     title: "Nicole Wallace - Software Engineer",
     description: `Software Engineering Portfolio`,
-    image: "/avatar.png",
+    image: "/ProjectImages/aboutImg.png",
     type: "website",
     ...customMeta,
   };
