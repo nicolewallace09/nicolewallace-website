@@ -9,7 +9,7 @@ const ContainerBlock = ({ children, ...customMeta }) => {
 
   const meta = {
     title: "Nicole Wallace - Software Engineer",
-    description: `Software Engineering Portfolio`,
+    description: `Nicole Wallace Software Engineering Website`,
     image: "/ProjectImages/aboutImg.png",
     type: "website",
     ...customMeta,
