@@ -8,7 +8,7 @@ const userData = {
           "Hi, I'm Nicole! A Software Engineer from the SF Bay Area.",
     },
     email: 'nicole.elisaw@gmail.com',
-    resumeUrl: 'https://www.dropbox.com/s/0owq2k8kqayn987/Nicole%20Wallace%20-%20Software%20Engineer%20Resume%20v2.pdf?dl=0'
+    resumeUrl: 'https://www.dropbox.com/s/dmiqrczwbfudrnn/Nicole%20Wallace%20-%20Software%20Engineer%20Resume%20v3.pdf?dl=0'
 }
 
  const AboutMe = () => {
