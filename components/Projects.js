@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const userData = {
     projects: [
@@ -6,58 +7,58 @@ const userData = {
             id: 1, 
             title: "Exchange Rates",
             link: "https://competent-kilby-6c3bd3.netlify.app/",
-            imgUrl: "https://github.com/nicolewallace09/exchange-rates/raw/main/src/images/home.png",
+            imgUrl: "/ProjectImages/exchangerates.png",
             repo: "https://github.com/nicolewallace09/exchange-rates"
         },
         {
             id: 2, 
             title: "Movie Search App",
             link: "https://nicolewallace09.github.io/react-movie-app",
-            imgUrl: "https://github.com/nicolewallace09/react-movie-app/raw/main/public/images/search.png",
+            imgUrl: "/ProjectImages/movieapp.png",
             repo: "https://github.com/nicolewallace09/react-movie-app"
         },
         {
             id: 3, 
             title: "Student Profiles",
             link: "https://nicolewallace09.github.io/student-profiles/",
-            imgUrl: "https://github.com/nicolewallace09/student-profiles/raw/main/public/images/app.png",
+            imgUrl: "/ProjectImages/student.png",
             repo: "https://github.com/nicolewallace09/student-profiles"
         },
         {
             id: 4, 
             title: "The Shoppies",
             link: "https://nicolewallace09.github.io/the-shoppies/",
-            imgUrl: "https://github.com/nicolewallace09/the-shoppies/raw/main/public/images/screenshot.png",
+            imgUrl: "/ProjectImages/shoppies.png",
             repo: "https://github.com/nicolewallace09/the-shoppies"
         },
         {
             id: 5, 
             title: "Employee Tracker",
-            imgUrl: "ProjectImages/employe-tracker.png",
+            imgUrl: "/ProjectImages/employee-tracker.png",
             repo: "https://github.com/nicolewallace09/employee-tracker"
         },
         {
             id: 7, 
             title: "Web Scraper",
-            imgUrl: "ProjectImages/webscraper.png",
+            imgUrl: "/ProjectImages/webscraper.png",
             repo: "https://github.com/nicolewallace09/webscraper2"
         },
         {
             id: 8, 
             title: "Readme Generator",
-            imgUrl: "https://github.com/nicolewallace09/readme-generator/raw/master/utils/README-GENERATOR%20(1).gif",
+            imgUrl: "/ProjectImages/readme.gif",
             repo: "https://github.com/nicolewallace09/readme-generator"
         },
         {
             id: 7, 
             title: "Team Profile Generator",
-            imgUrl: "ProjectImages/teamprofile.png",
+            imgUrl: "/ProjectImages/teamprofile.png",
             repo: "https://github.com/nicolewallace09/team-profile-generator"
         },
         {
             id: 9,
             title: "E-Commerce Backend",
-            imgUrl: "ProjectImages/ecommerce.png",
+            imgUrl: "/ProjectImages/ecommerce.png",
             repo: "https://github.com/nicolewallace09/e-commerce-backend"
         }
       ]
@@ -94,9 +95,10 @@ const Projects = () => {
     <>
     <div className="project-card relative overflow-hidden">
         <div className="h-72 object-cover">
-        <img
+        <Image
             src={imgUrl}
             alt="portfolio"
+            layout='fill'
             className="transform hover:scale-125 transition duration-2000 ease-out object-cover h-full w-full"
         />
         </div>

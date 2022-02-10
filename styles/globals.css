@@ -25,16 +25,21 @@ img.project-link {
   border-radius: 10px;
 }
 
-.profile-image {
-  border-radius: 50%;
-}
-
 .project-card {
   border: 5px solid #eab5d0; 
 }
 
+.profile-image {
+  border-radius: 10%;
+}
+
 @media (max-width: 600px) {
   .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .home-grid {
     width: 100%;
     flex-direction: column;
   }
